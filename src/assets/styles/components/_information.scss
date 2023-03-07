@@ -1,0 +1,63 @@
+.information {
+  &__header {
+    @apply flex flex-wrap justify-between items-end md:items-center mb-[26px] md:mb-8 lg:mb-[45px]
+  }
+  &__title {
+    @apply max-w-[200px] md:max-w-full text-[26px] leading-[32px] md:text-[26px] md:leading-[34px] lg:text-[35px] lg:leading-[52px] font-semibold uppercase
+  }
+  &__link {
+    @apply border-transparent will-change-[border-color] duration-300 transition-colors hover:border-black border-b text-base leading-[22px] md:text-[15px] lg:text-[15px] whitespace-nowrap mb-1 md:mb-0
+  }
+  &__blocks {
+    @apply grid grid-cols-12 gap-6
+  }
+  &__block {
+    a {
+      @apply z-20 relative will-change-[border-color,background-color,text] hover:border-black hover:bg-black hover:text-white duration-300 transition-colors text-lg lg:text-xl border-2 border-white rounded-[22px] lg:py-[20px] lg:px-[32px] py-[14px] px-[22px]
+    }
+    &__title {
+      @apply text-xl md:text-xl lg:text-3xl relative
+    }
+    &:nth-child(1) {
+      .information__block__title {
+        @apply md:max-w-[276px] lg:max-w-[420px]
+      }
+      img {
+        @apply absolute bottom-[-48px] md:bottom-0 right-[-90px] md:right-[-22px] rounded-br-[30px] h-[246px] md:h-[159px] lg:h-[259px]
+      }
+      a {
+        @apply hover:border-white hover:bg-white hover:text-black
+      }
+      @apply bg-red-400 relative text-white lg:col-span-5
+    }
+    &:nth-child(2) {
+      a {
+        @apply hover:border-white hover:bg-white hover:text-black
+      }
+      &:before {
+        @apply content-[''] bg-black opacity-50 w-full h-full absolute top-0 left-0 z-10
+      }
+      .information__block__title {
+        @apply lg:max-w-[460px] z-20 relative
+      }
+      img {
+        @apply absolute top-0 left-0 w-full h-full object-cover
+      }
+      @apply text-white relative lg:col-span-7
+    }
+    &:nth-child(3) {
+      .information__block__title {
+        @apply md:max-w-[420px] lg:max-w-[570px]
+      }
+      img {
+        @apply absolute bottom-0 md:right-0 right-[-86px] rounded-br-[30px] h-[244px] md:h-[200px] lg:h-[258px]
+      }
+      a {
+        @apply border-black
+      }
+      @apply relative md:col-span-12 md:h-[234px] lg:h-[292px] bg-gray-200
+    }
+    @apply col-span-12 md:col-span-6 h-[360px] md:h-[288px] lg:h-[480px] rounded-[30px] p-[30px] flex flex-col justify-between items-start overflow-hidden
+  }
+  @apply bg-gray-800 text-black relative
+}

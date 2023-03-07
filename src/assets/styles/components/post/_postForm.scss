@@ -1,0 +1,81 @@
+.post__form {
+  &__header {
+    a {
+      img {
+        @apply mr-[10px] lg:w-[34px] lg:h-[34px] md:w-7 md:h-7 
+      }
+      @apply md:flex md:items-center border-black rounded-[20px] border p-[15px] lg:p-[18px] hidden
+    }
+    @apply flex items-start justify-between mb-[29px]
+  }
+  &__text {
+    @apply md:text-[14px] md:leading-[21px] lg:text-[17px] lg:leading-[25px] will-change-[color] duration-300 transition-colors hover:text-red-400 font-semibold
+  }
+  &__title {
+    @apply max-w-[260px] uppercase text-[26px] leading-[31px] md:text-[29px] md:leading-[40px] font-semibold
+  }
+  form {
+    input {
+      &:nth-child(2),
+      &:nth-child(3) {
+        @apply md:w-[43%]
+      }
+      @apply rounded-none duration-300 will-change-[border-color] transition-colors hover:border-red-400 active:border-red-400 focus:border-red-400 w-full py-[18px] md:py-5 mt-1 text-black text-[17px] md:text-base lg:text-lg leading-5 md:leading-[25px] lg:leading-[22px] border-b border-black focus:outline-none active:outline-none
+    }
+    textarea {
+      @apply duration-300 will-change-[border-color] transition-colors hover:border-red-400 active:border-red-400 focus:border-red-400 resize-none w-full border-b bg-transparent text-black text-lg leading-[22px] mt-8 border-black focus:outline-none active:outline-none
+    }
+    .g-recaptcha {
+      @apply mt-8
+    }
+    @apply flex flex-wrap justify-between
+  }
+  &__dropdown {
+    @apply relative border-b border-black text-lg leading-[22px] w-full duration-300 will-change-[border-color] transition-colors hover:border-red-400
+  }
+  &__container {
+    input {
+      @apply invisible absolute top-0 left-0
+    }
+    img {
+      @apply duration-300 will-change-transform transition-transform
+    }
+    &.active {
+      img {
+        @apply rotate-180
+      }
+    }
+    @apply relative flex items-center justify-between cursor-pointer py-5 mt-1
+  }
+  &__value {
+    @apply text-gray-400 text-[17px] md:text-base lg:text-lg leading-5 md:leading-[25px] lg:leading-[22px]
+  }
+  &__items {
+    @apply bg-white z-10 absolute top-[64px] md:top-[69px] lg:top-[66px] w-full border border-black py-4 px-2 rounded-b-xl hidden flex-col items-start
+  }
+  &__item {
+    &:first-child {
+      @apply mt-0
+    }
+    @apply mt-5 cursor-pointer duration-300 will-change-[color] transition-colors hover:text-red-400
+  }
+  &__container {
+    input {
+      @apply absolute top-0 left-0 invisible
+    }
+    @apply relative
+  }
+  &__footer {
+    button {
+      @apply order-1 md:order-2 bg-red-400 rounded-[25px] text-white text-[19px] md:text-lg leading-7 lg:text-2xl lg:leading-[33px] font-medium py-[19px] px-7 md:py-[14px] lg:py-[17px] md:px-[23px] lg:px-[33px] duration-300 will-change-[background-color] transition-colors hover:bg-red-500
+    }
+    @apply flex items-start md:items-center flex-col md:flex-row justify-between mt-[20px] w-full
+  }
+  &__policy {
+    a {
+      @apply border-transparent border-b hover:border-black duration-300 will-change-[border-color] transition-colors
+    }
+    @apply order-2 md:order-1 mt-[18px] md:mt-0 font-medium text-black max-w-[336px] lg:max-w-[400px] text-[15px] leading-[22px] md:text-sm md:leading-[21px] lg:text-lg lg:leading-7
+  }
+  @apply py-[57px] px-6 md:p-[33px] md:pb-10 lg:p-[45px] lg:pb-[50px] bg-white rounded-[25px] lg:rounded-[30px] mt-[70px] lg:mt-[90px]
+}

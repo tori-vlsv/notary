@@ -1,0 +1,74 @@
+table {
+  tbody {
+    @apply flex flex-col min-w-[720px] md:min-w-full -mx-[2px]
+  }
+  tr {
+    th {
+      &:nth-child(1) {
+        @apply md:rounded-tl-[30px]
+      }
+      &:nth-child(2) {
+        @apply md:rounded-tr-[30px]
+      }
+      @apply bg-red-400 py-5 md:py-[13px] lg:py-4 text-center text-white w-1/2 px-6 md:px-[5%] text-[15px] leading-[20px] md:text-[13px] md:leading-[25px] lg:text-base lg:leading-6
+    }
+    &.post__table__header {
+      & + tr {
+        @apply mt-0
+      }
+      th {
+        strong {
+          @apply leading-5 mt-1 md:mt-2 font-normal block normal-case
+        }
+        &:nth-child(2) {
+          @apply top-[19px] md:top-auto absolute left-6 md:left-auto md:right-[18px] lg:right-[30px] bg-transparent w-auto table-cell p-0 will-change-transform duration-300 transition-transform
+        }
+        @apply text-left md:text-center uppercase text-[15px] leading-5 md:text-sm md:leading-[25px] lg:text-base lg:leading-6 py-4 md:py-[13px] font-bold bg-gray-600 text-black block pl-[50px] pr-6 md:px-[7%] rounded-none w-[calc(100%-4px)] mx-[2px]
+      }
+      &.rounded {
+        @apply md:rounded-b-[30px] overflow-hidden
+      }
+      &.closed {
+        th {
+          &:nth-child(2) {
+            @apply rotate-[180deg]
+          }
+        }
+        &:last-child {
+          @apply mb-0
+        }
+        @apply mb-[2px]
+      }
+      @apply flex md:items-center relative mt-0 cursor-pointer
+    }
+    td {
+      span {
+        @apply font-bold
+      }
+      @apply bg-gray-200 py-8 px-6 w-1/2 align-top text-base leading-[23px] md:text-sm md:leading-[21px] lg:text-base lg:leading-6
+    }
+    &:last-child {
+      td {
+        &:nth-child(1) {
+          @apply md:rounded-bl-[30px]
+        }
+        &:nth-child(2) {
+          @apply md:rounded-br-[30px]
+        }
+      }
+    }
+    @apply -mt-[2px]
+  }
+  scrollbar-width: thin;
+  scrollbar-color: dark;
+  &::-webkit-scrollbar {
+    @apply h-2
+  }
+  &::-webkit-scrollbar-track {
+    @apply bg-gray-800
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-md border-2 border-solid border-gray-800 bg-red-400
+  }
+  @apply md:rounded-[25px] lg:rounded-[30px] overflow-x-scroll md:overflow-hidden mt-[30px] lg:mt-[50px] border-separate block md:table
+}

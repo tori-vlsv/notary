@@ -1,0 +1,67 @@
+.post {
+  h2 {
+    @apply text-[20px] leading-[26px] lg:text-[25px] lg:leading-[30px] font-bold mt-[50px] lg:mt-[66px]
+  }
+  &__content {
+    nav,
+    blockquote {
+      ol {
+        li {
+          &::marker {
+            @apply font-normal
+          }
+        }
+      }
+    }
+    ol {
+      li {
+        &:first-child {
+          @apply mt-0
+        }
+        a {
+          @apply border-b border-transparent transition-colors duration-300 will-change-[border-color] hover:border-black
+        }
+        span {
+          @apply font-bold
+        }
+        &::marker {
+          @apply font-bold
+        }
+        @apply pl-[14px] mt-2 lg:mt-[15px]
+      }
+      @apply list-decimal ml-5 text-base md:text-sm lg:text-lg mt-5
+    }
+    ul {
+      li {
+        &:first-child {
+          @apply mt-0
+        }
+        &:before {
+          @apply content-[''] absolute w-[6px] h-[6px] bg-red-400 rounded-full top-2 lg:top-[9px] -left-4
+        }
+        span {
+          @apply text-red-400 border-b border-red-400
+        }
+        @apply pl-2 md:pl-4 mt-3 lg:mt-[15px] text-base md:text-sm lg:text-[20px] lg:leading-[30px] relative
+      }
+      @apply ml-[17px] mt-[17px] md:mt-[28px] lg:mt-[38px]
+    }
+    p {
+      @apply text-base md:text-sm lg:text-[20px] lg:leading-[30px] mt-5 md:mt-[25px] lg:mt-[30px]
+    }
+    h3 {
+      @apply text-[18px] leading-[24px] md:text-[17px] md:leading-[21px] lg:text-[21px] lg:leading-[30px] font-semibold
+    }
+    h4 {
+      @apply text-lg lg:text-lg font-bold
+    }
+    blockquote {
+      @apply py-10 px-6 md:p-9 lg:py-[35px] lg:px-[44px] rounded-[30px] bg-gray-200 mt-6 lg:mt-[52px]
+    }
+    @apply lg:col-start-5 lg:col-span-8 md:max-w-[569px] lg:max-w-full
+  }
+  &__wrapper {
+    @apply lg:grid lg:grid-cols-12
+  }
+  @apply pt-[50px] pb-[14px] md:pb-0 md:pt-[60px] lg:pt-[110px] lg:pb-5 overflow-hidden
+}

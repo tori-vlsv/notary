@@ -1,0 +1,96 @@
+.actions__item {
+  &__header {
+    &:after {
+      @apply hidden content-[''] absolute left-0 right-0 w-full h-5 bg-red-400 -bottom-5
+    }
+    @apply border border-gray-800 rounded-t-[15px] lg:rounded-t-[30px] relative bg-red-400 flex items-center justify-between
+  }
+  &:last-child {
+    .actions__item__header {
+      &:after {
+        @apply hidden
+      }
+    }
+  }
+  &__inner {
+    &:hover {
+      .actions__item__title {
+        @apply border-b-white
+      }
+    }
+    @apply pt-[18px] pb-4 md:py-3 px-[25px] md:px-4 lg:py-6 lg:px-[34px] flex items-center justify-between w-full
+  }
+  &__title {
+    @apply ml-8 md:ml-0 text-[17px] leading-5 md:text-xs lg:text-[22px] md:leading-[26px] lg:leading-[30px] font-bold text-white border-b border-transparent transition-colors will-change-[border-color] duration-300
+  }
+  &__icon {
+    img {
+      @apply w-full h-full
+    }
+    @apply absolute w-[18px] h-[23px] md:h-[17px] md:w-[14px] md:static lg:w-auto lg:h-auto left-[25px]
+  }
+  &__toggle {
+    @apply rotate-180 md:hidden absolute right-[5px] z-10 flex items-center justify-center w-10 h-10
+  }
+  &__body {
+    ul {
+      li {
+        &:before {
+          @apply content-[''] absolute w-[6px] h-[6px] bg-red-400 rounded-full top-1 md:top-2 lg:top-[9px] -left-4
+        }
+        &:last-child {
+          @apply mb-0
+        }
+        @apply md:text-[11px] lg:text-lg md:leading-[15px] lg:leading-[26px] mb-2 lg:mb-3.5 ml-5 pl-1.5 relative
+      }
+      @apply block
+    }
+    &::-webkit-scrollbar {
+      @apply w-[10px]
+    }
+    &::-webkit-scrollbar-track {
+      @apply bg-white
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-md border-[3px] border-solid border-white bg-gray-300
+    }
+    @apply pt-3.5 lg:pt-[30px] px-4 lg:px-[36px] overflow-y-auto max-h-[211px] lg:max-h-[400px]
+  }
+  &.hiddenOnMobile {
+    &:after {
+      @apply opacity-0 h-0 md:h-[70px] lg:h-[150px] md:opacity-100
+    }
+    &:last-child {
+      .actions__item__header {
+        &:after {
+          @apply hidden
+        }
+      }
+    }
+    .actions__item__header {
+      &:after {
+        @apply block md:hidden
+      }
+      @apply border-white md:border-none
+    }
+    .actions__item__toggle {
+      @apply rotate-0
+    }
+    .actions__item__body {
+      ul {
+        @apply hidden md:block
+      }
+      @apply pt-0 md:pt-3.5 lg:pt-[30px]
+    }
+    @apply pb-0 md:pb-3.5 lg:pb-[30px] mb-0 overflow-visible md:overflow-hidden
+  }
+  &.scrolled {
+    &:after {
+      @apply opacity-0
+    }
+  }
+  &:after {
+    @apply hidden md:block content-[''] absolute bottom-0 left-0 w-full h-[70px] lg:h-[150px] bg-[linear-gradient(180deg,_rgba(255,255,255,0)_0%,_#FFFFFF_100%)] md:transition-all md:will-change-[opacity,height] md:duration-300
+  }
+  @apply mb-6 md:mb-0 z-20 rounded-[15px] lg:rounded-[30px] overflow-hidden pb-3.5 lg:pb-[30px] bg-white relative
+}

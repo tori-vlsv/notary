@@ -1,0 +1,24 @@
+.post__form
+  .post__form__header 
+    .post__form__title Задать вопрос нотариусу
+    a(href="#") 
+      img(src="/assets/images/icons/whatsup-icon.svg", alt="whatsup-icon")
+      .post__form__text Написать в WhatsApp
+  form(action="#")
+    input(type="text" name="name" placeholder="Как к вам обращаться*" required)
+    input(type="email" name="email" placeholder="Email*" required)
+    input(type="tel" name="phone" placeholder="Телефон")
+    .post__form__dropdown
+      .post__form__container.dropdown
+        .post__form__value.dropdown-value Тема вопроса
+        input(type="text")
+        img(src="/assets/images/icons/angle-down-black.svg", alt="angle-down-black")
+      .post__form__items
+        .post__form__item.dropdown-item Тема вопроса 1
+        .post__form__item.dropdown-item Тема вопроса 2
+        .post__form__item.dropdown-item Тема вопроса 3
+    textarea(name="text" placeholder="Текст вопроса")
+    .g-recaptcha(data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX")
+    .post__form__footer 
+      .post__form__policy Нажимая на кнопку Отправить вы даете согласие на обработку <a href="#">персональных данных</a>
+      button(type="submit") Отправить вопрос

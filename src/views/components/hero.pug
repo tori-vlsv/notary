@@ -1,0 +1,82 @@
+include ../mixins/hero-item.pug
+section.hero.hero-main
+  .wrapper
+    .hero__wrapper 
+      .swiper.hero__slider
+        .swiper-wrapper
+          +hero-item(
+            'Контакты',
+            'Находимся в центре Москвы в трех минутах от метро Чистые пруды',
+            'Вдоль по улице Мясницкая в сторону центра, по левой стороне дом 24, главный вход, второй этаж'
+          )
+          +hero-item(
+            'Контакты',
+            'Находимся в центре Москвы в трех минутах от метро Чистые пруды',
+            'Вдоль по улице Мясницкая в сторону центра, по левой стороне дом 24, главный вход, второй этаж'
+          )
+          +hero-item(
+            'Контакты',
+            'Находимся в центре Москвы в трех минутах от метро Чистые пруды',
+            'Вдоль по улице Мясницкая в сторону центра, по левой стороне дом 24, главный вход, второй этаж'
+          )
+      .swiper-pagination
+      .hero__contacts
+        .hero__contacts__title 
+          img(src="/assets/images/logo-big-black.svg", alt="logo-big-black")
+        .hero__contacts__location в центре Москвы
+        a(href="tel:+7 (495) 568-15-08").hero__contacts__phone 
+          img(src="/assets/images/icons/phone-black.svg", alt="phone-black")
+          span +7 (495) 568-15-08
+        .hero__contacts__schedule пн-пт 9:00—19:00
+        .hero__contacts__buttons 
+          a(href="#").hero__contacts__button 
+            img(src="/assets/images/icons/whatsup-icon.svg", alt="whatsup-icon")
+            span Написать в WhatsApp
+          button(type="button").hero__contacts__button.call-popup 
+            span Онлайн запись
+        button(type="button").hero__contacts__question.call-popup 
+          img(src="/assets/images/icons/question.svg", alt="question")
+          span Задать вопрос
+        .hero__contacts__items
+          .hero__contacts__item
+            img(src="/assets/images/icons/location.svg", alt="location")
+            p г. Москва, ул. Мясницкая, <br> дом 24, главный вход
+          .hero__contacts__item
+            img(src="/assets/images/icons/subway-black.svg", alt="subway-black")
+            p Чистые пруды, Сретенский <br> бульвар, Тургеневская
+          .hero__contacts__item
+            img(src="/assets/images/icons/calendar.svg", alt="calendar")
+            p пн-пт 9:00—19:00, <br> без перерывов
+          .hero__contacts__item
+            img(src="/assets/images/icons/email.svg", alt="email")
+            a(href="mailto:info@notarius24.ru") info@notarius24.ru
+        .hero__contacts__mobileButton
+          a(href="#")
+            img(src="/assets/images/icons/whatsup-icon.svg", alt="whatsup-icon")
+            span Написать в WhatsApp
+        .hero__contacts__mobileButtons
+            button(type="button").call-popup
+              span Онлайн запись
+            button(type="button").call-popup
+              span Задать вопрос
+section.hero.hero-transparent
+  .wrapper
+    .hero__wrapper 
+      .hero__blank
+      .hero__contacts
+        .hero__contacts__title 
+          img(src="/assets/images/logo-big-black.svg", alt="logo-big-black")
+        .hero__contacts__location в центре Москвы
+        a(href="tel:+7 (495) 568-15-08").hero__contacts__phone 
+          img(src="/assets/images/icons/phone-black.svg", alt="phone-black")
+          span +7 (495) 568-15-08
+        .hero__contacts__schedule пн-пт 9:00—19:00
+        .hero__contacts__buttons 
+          a(href="#").hero__contacts__button 
+            img(src="/assets/images/icons/whatsup-icon.svg", alt="whatsup-icon")
+            span написать в WhatsApp
+          button(type="button").hero__contacts__button.call-popup 
+            span Онлайн запись
+        button(type="button").hero__contacts__question.call-popup 
+          img(src="/assets/images/icons/question.svg", alt="question")
+          span Задать вопрос

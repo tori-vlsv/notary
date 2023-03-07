@@ -1,0 +1,15 @@
+mixin reviews-item(date, name, text)
+  .reviews-item
+    .reviews-item__header
+      .reviews-item__date= date
+      .reviews-item__rating
+        img(src="/assets/images/icons/star.svg", alt="star")
+        img(src="/assets/images/icons/star.svg", alt="star")
+        img(src="/assets/images/icons/star.svg", alt="star")
+        img(src="/assets/images/icons/star.svg", alt="star")
+        img(src="/assets/images/icons/star.svg", alt="star")
+    .reviews-item__main
+      .reviews-item__name= name
+      .reviews-item__description
+        img(src="/assets/images/icons/quotes.svg", alt="quotes")
+        .reviews-item__text= text

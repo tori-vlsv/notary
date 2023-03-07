@@ -1,0 +1,29 @@
+.questions__item {
+  &__icon {
+    svg {
+      @apply w-full h-full
+    }
+    @apply mb-[22px] md:mb-4 lg:mb-7 w-[22px] md:w-5 h-[22px] md:h-5 lg:w-8 lg:h-8
+  }
+  &__title {
+    @apply text-lg leading-6 md:text-[15px] md:leading-[19px] lg:text-[21px] lg:leading-7 font-semibold mb-5 md:mb-[9px] lg:mb-[19px] min-h-[72px] md:min-h-[76px] lg:min-h-[84px]
+  }
+  &__text {
+    @apply leading-[23px] md:text-[11px] md:leading-[15px] lg:text-lg lg:leading-[26px] mb-[35px] md:mb-[22px] lg:mb-[23px] line-clamp-4
+  }
+  &__link {
+    img {
+      @apply ml-2.5 will-change-transform duration-300 transition-transform
+    }
+    span {
+      @apply text-lg leading-[18px] md:text-[11px] md:leading-[14px] lg:text-base lg:leading-[23px] font-semibold text-red-400
+    }
+    &:hover {
+      img {
+        @apply translate-x-[5px]
+      }
+    }
+    @apply flex items-center
+  }
+  @apply bg-white md:bg-transparent pl-[23px] pr-2 pt-7 pb-[46px] md:p-0 rounded-[25px] md:rounded-none
+}

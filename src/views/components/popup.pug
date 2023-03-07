@@ -1,0 +1,25 @@
+.popup__bg
+.popup
+  .popup__header 
+    .popup__close
+      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.4454 1.99987L2 21.4453" stroke="black" stroke-width="3"/><path d="M21.4728 21.7228L2.02734 2.27734" stroke="black" stroke-width="3"/></svg>
+    .popup__title Задать вопрос нотариусу
+    .popup__desc Мы с радостью ответим <br> на все интересующие вас вопросы
+  form(action="#") 
+    input(type="text" name="name" placeholder="Имя*" required)
+    input(type="email" name="email" placeholder="Email*" required)
+    input(type="tel" name="phone" placeholder="Телефон")
+    .popup__dropdown 
+      .popup__dropdown__header.dropdown
+        span.dropdown-value Тема вопроса
+        input(type="text" name="theme")
+        img(src="/assets/images/icons/angle-down-black.svg", alt="angle-down-black")
+      .popup__dropdown__body
+        p.dropdown-item Тема вопроса 1
+        p.dropdown-item Тема вопроса 2
+        p.dropdown-item Тема вопроса 3
+    textarea(name="text" placeholder="Текст вопроса*" required)
+    .g-recaptcha(data-sitekey="6LcmoAokAAAAAN9Tb-1omuhi6plGxaHX6IuH6jAp")
+    .popup__footer 
+      p Нажимая на кнопку Отправить вы даете согласие на обработку <a href="#">персональных данных</a>
+      button(type="submit") Отправить вопрос

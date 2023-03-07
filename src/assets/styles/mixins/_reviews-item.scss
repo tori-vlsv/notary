@@ -1,0 +1,36 @@
+.reviews-item {
+  &:nth-child(n+3) {
+    @apply hidden md:block
+  }
+  &__header {
+    @apply flex justify-between items-center mb-7 md:mb-[18px] lg:mb-9
+  }
+  &__date {
+    @apply opacity-60 text-base md:text-xs lg:text-base
+  }
+  &__rating {
+    &:first-child {
+      @apply ml-0
+    }
+    img {
+      @apply ml-1 md:ml-[5px] w-[10px] h-[10px] md:h-2 md:w-[9px] lg:h-[13px] lg:w-[14px]
+    }
+    @apply flex items-center
+  }
+  &__title {
+    @apply text-lg md:text-base lg:text-lg
+  }
+  &__name {
+    @apply text-sm lg:text-xl font-bold mb-3 lg:mb-4
+  }
+  &__description {
+    img {
+      @apply mr-[7px] lg:mr-3.5 w-[10px] h-[7px] lg:w-[19px] lg:h-[14px] mt-[6px] md:mt-[3px] lg:mt-[6px]
+    }
+    @apply flex items-start
+  }
+  &__text {
+    @apply text-base md:text-[11px] md:leading-[15px] lg:text-lg
+  }
+  @apply text-black px-6 pt-6 pb-9 md:px-[17px] md:pt-[17px] md:pb-[30px] lg:px-[34px] lg:pt-7 lg:pb-[60px] bg-white rounded-[25px] md:rounded-[20px] lg:rounded-[30px] 
+}

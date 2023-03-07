@@ -1,0 +1,27 @@
+.location {
+  &__wrapper {
+    @apply flex justify-between relative
+  }
+  &__content {
+    p {
+      @apply leading-[23px] font-medium md:text-sm md:leading-[21px] lg:text-lg lg:leading-7 mb-[30px] md:mb-12 lg:mb-16
+    }
+    button {
+      @apply will-change-[background-color] hover:bg-red-500 duration-300 transition-colors text-[19px] md:text-lg leading-7 lg:text-2xl lg:leading-[33px] font-medium bg-red-400 rounded-[22px] lg:rounded-[25px] py-[19px] md:py-[14px] inline-block px-7 md:px-[23px] lg:py-[17px] lg:px-[33px] text-white
+    }
+    @apply max-w-[350px] lg:max-w-[671px]
+  }
+  &__title {
+    @apply text-[26px] leading-[31px] mb-6 lg:text-[38px] lg:leading-[52px] font-bold md:mb-[27px] lg:mb-[45px] uppercase
+  }
+  &__subtitle {
+    @apply text-lg leading-[23px] md:text-base md:leading-[21px] lg:text-[25px] lg:leading-[33px] mb-[22px] lg:mb-6 font-semibold
+  }
+  &__image {
+    img {
+      @apply w-full h-full object-cover
+    }
+    @apply absolute top-24 -right-[182px] lg:static max-w-[429px] lg:max-w-[583px] hidden md:block rounded-[30px] overflow-hidden
+  }
+  @apply pt-16 lg:pt-[146px] overflow-hidden
+}

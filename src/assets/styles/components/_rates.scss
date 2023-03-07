@@ -1,0 +1,21 @@
+.rates {
+  &__wrapper {
+    a {
+      @apply will-change-[background-color,color] hover:bg-black hover:text-white duration-300 transition-colors mt-[46px] md:mt-0 text-black bg-white rounded-[23px] px-7 py-[19px] md:px-[23px] lg:px-5 md:py-[14px] lg:py-3 text-lg lg:text-xl leading-7 lg:leading-9 font-semibold tracking-[0.01em]
+    }
+    @apply flex items-start md:items-end justify-between flex-col md:flex-row
+  }
+  &__content {
+    p {
+      &:last-child {
+        @apply mb-0
+      }
+      @apply mb-4 lg:mb-6 text-base md:text-sm lg:text-lg leading-[23px] md:leading-[21px] lg:leading-[27px] font-medium
+    }
+    @apply max-w-[391px] lg:max-w-[533px] text-white
+  }
+  &__title {
+    @apply text-[26px] leading-[52px] mb-[18px] lg:text-[38px] lg:leading-[52px] font-bold md:mb-[25px] lg:mb-[22px] uppercase
+  }
+  @apply bg-rates pt-10 pb-[60px] md:py-[50px] lg:py-[60px] bg-no-repeat bg-cover bg-center
+}

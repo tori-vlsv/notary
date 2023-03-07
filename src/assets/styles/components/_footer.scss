@@ -1,0 +1,203 @@
+.footer {
+  &__wrapper {
+    @apply grid grid-cols-12 md:gap-6
+  }
+  &__links {
+    @apply max-w-[358px]
+  }
+  &__col {
+    &-3 {
+      @apply col-span-3
+    }
+    &-4 {
+      @apply col-span-4
+    }
+    &-5 {
+      @apply col-span-5
+    }
+    &-9 {
+      @apply col-span-9
+    }
+    @apply flex flex-col items-start
+  }
+  &__wrap {
+    @apply flex-wrap max-h-[354px] md:max-h-[312px] lg:max-h-[342px] pb-6
+  }
+  &__title {
+    @apply text-xl leading-7 lg:text-lg lg:leading-6 font-bold tracking-[0.02em] uppercase
+  }
+  &__nav {
+    .footer__col {
+      &:first-child {
+        @apply order-1 p-0 md:pr-8 py-10 lg:py-0 border-b border-red-300 pl-0 lg:pl-10 md:border-none
+      }
+      &:nth-child(2) {
+        .footer__link {
+          &:nth-child(7) {
+            @apply mt-12 lg:mt-5
+          }
+          &:nth-child(8) {
+            @apply lg:mt-12
+          }
+          @apply w-[45%] lg:w-auto
+        }
+        .footer__title {
+          @apply col-span-2
+        }
+        @apply order-2 md:border-b-0 md:pl-[50px] md:border-l md:border-red-300 pl-0 lg:pl-10 lg:-ml-12 py-10 md:my-10 md:py-0 lg:my-0 pr-0 lg:pr-12 border-b border-red-300
+      }
+      &:nth-child(3) {
+        @apply order-3 md:order-4 lg:order-3 pr-0 lg:-ml-12 pl-0 md:pl-[50px] lg:pl-10 py-10 lg:py-0 md:col-start-7 md:col-end-13 lg:col-start-10 lg:col-end-13
+      }
+      &:nth-child(4) {
+        @apply order-3
+      }
+      &-3 {
+        @apply col-span-12 md:col-span-6 lg:col-span-3
+      }
+      &-4 {
+        @apply col-span-12 md:col-span-6 lg:col-span-4
+      }
+      &-5 {
+        @apply col-span-12 md:col-span-6 lg:col-span-5
+      }
+      @apply px-12
+    }
+    @apply lg:py-10 gap-0 lg:gap-6
+  }
+  &__link {
+    &.active {
+      span {
+        @apply border-white
+      }
+    }
+    span {
+      @apply border-b border-transparent will-change-[border-color] duration-300 transition-colors
+    }
+    &:hover {
+      span {
+        @apply border-white
+      }
+    }
+    @apply text-lg leading-6 md:text-base lg:text-lg font-medium mt-5
+  }
+  &__address {
+    p {
+      @apply mt-3 text-sm
+    }
+  }
+  button,
+  &__whatsup {
+    img {
+      @apply mr-[9px]
+    }
+    @apply will-change-[color] duration-300 transition-colors hover:text-red-400 mt-3 flex items-center py-[6px] pl-2 pr-3 text-[13px] leading-[22px] font-semibold text-black bg-white rounded-[56px] mb-[13px]
+  }
+  &__location {
+    @apply leading-[23px] font-medium inline-block mt-[1px]
+  }
+  &__mail {
+    @apply mt-3 border-b border-transparent text-sm will-change-[border-color] duration-300 transition-colors hover:border-white
+  }
+  &__phone {
+    svg {
+      @apply mr-2
+    }
+    span {
+      @apply will-change-[border-color] duration-300 transition-colors border-b border-transparent
+    }
+    &:hover {
+      span {
+        @apply border-white
+      }
+    }
+    @apply text-[25px] leading-[32px] font-semibold inline-flex items-center mt-7
+  }
+  &__info {
+    &:before {
+      @apply md:content-[''] absolute top-0 -left-[9999px] -right-[9999px] h-[1px] bg-red-300
+    }
+    .footer__col {
+      &-3 {
+        @apply col-span-12 lg:col-span-3
+      }
+      &-9 {
+        @apply col-span-12 lg:col-span-9
+      }
+    }
+    @apply pt-[38px] md:py-[30px] lg:py-10 relative border-t border-red-300 md:border-none gap-0 lg:gap-6
+  }
+  &__text {
+    p {
+      &:first-child {
+        @apply mt-0
+      }
+      @apply mt-6
+    }
+    @apply max-w-[769px] text-sm leading-[21px]
+  }
+  &__mobile__logo {
+    &:before {
+      @apply md:content-[''] absolute top-0 -left-[9999px] -right-[9999px] h-[1px] bg-red-300
+    }
+    img {
+      @apply w-full h-full max-w-[241px] max-h-[195px]
+    }
+    @apply py-10 hidden md:flex lg:hidden items-center justify-center relative
+  }
+  &__logo {
+    @apply flex md:hidden lg:flex items-center justify-center mx-auto mt-9 mb-[60px] md:mt-0 md:mb-0 md:mx-0 lg:pr-12 h-full
+  }
+  @apply bg-red-400 text-white overflow-hidden
+}
+.copy {
+  &__text {
+    p {
+      &:first-child {
+        @apply md:max-w-[376px] md:mr-4 lg:mr-[30px] md:border-r md:border-solid md:border-white lg:pr-[30px]
+      }
+      &:after {
+        @apply content-[''] absolute bottom-0 left-0 h-[1px] w-[53px] bg-[#454545] block md:hidden
+      }
+      @apply pb-3 md:pb-0 mb-3 md:mb-0 relative
+    }
+    @apply flex flex-col md:flex-row
+  }
+  .footer__col {
+    &-3 {
+      @apply col-span-12 lg:col-span-3
+    }
+    &-9 {
+      @apply col-span-12 lg:col-span-9
+    }
+    &.copy__policy {
+      p {
+        @apply md:min-w-[376px] md:mr-4 lg:min-w-full lg:mr-0 lg:pr-0
+      }
+      a {
+        @apply will-change-[border-color] border-b border-transparent hover:border-white duration-300 transition-colors mt-2 md:mt-0 leading-4
+      }
+      @apply flex md:items-center flex-col md:flex-row lg:block justify-start lg:justify-center
+    }
+    @apply justify-center
+  }
+  .whatsup {
+    img {
+      @apply w-[58px] h-[58px]
+    }
+    @apply lg:hidden fixed z-40 bottom-7 right-7 md:bottom-10 md:right-10
+  }
+  @apply bg-gray-100 text-white text-[13px] leading-5 py-[23px] lg:py-[34px] tracking-[0.01em] z-[51]
+}
+.cookie {
+  p {
+    a {
+      @apply border-b border-black absolute left-5 bottom-[23px] md:static transition-colors will-change-[color,border-color] hover:border-red-400 hover:text-red-400 duration-300
+    }
+    @apply mb-4 md:mb-0 md:max-w-[546px] lg:max-w-full text-sm leading-[19px] md:text-[11px] md:leading-4 lg:text-[17px] lg:leading-[22px] font-medium
+  }
+  button {
+    @apply bg-black duration-300 transition-colors text-white rounded-[60px] px-6 py-2 will-change-[background-color] text-sm leading-[22px] md:text-xs md:leading-4 lg:text-[15px] lg:leading-[23px] hover:bg-red-400
+  }
+  @apply fixed flex justify-end flex-wrap md:flex-nowrap items-center md:justify-between z-40 bottom-0 left-0 w-full pt-5 pb-[23px] md:py-4 lg:py-[23px] px-6 md:px-10 bg-white
+}

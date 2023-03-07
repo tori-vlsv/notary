@@ -1,0 +1,17 @@
+.news__item {
+  &:nth-child(n+3) {
+    @apply hidden md:block
+  }
+  &__date {
+    @apply text-base md:text-sm lg:text-base mb-3.5 md:mb-[18px] lg:mb-5 font-medium
+  }
+  &__title {
+    @apply line-clamp-4 text-lg md:text-base lg:text-lg will-change-[color] transition-colors duration-300
+  }
+  &:hover {
+    .news__item__title {
+      @apply text-red-400
+    }
+  }
+  @apply text-black 
+}

@@ -1,0 +1,43 @@
+.post {
+  &__articles {
+    &__blocks {
+      @apply mt-10
+    }
+  }
+  &__article {
+    a {
+      @apply lg:text-xl text-lg py-3 px-6 lg:py-5 lg:px-8 rounded-[22px] lg:rounded-[23px] border will-change-[border-color,color,background-color] duration-300 transition-colors hover:bg-black hover:text-white hover:border-black
+    }
+    &__title {
+      @apply text-[21px] leading-[25px] md:text-xl lg:text-3xl font-medium max-w-[270px] md:max-w-[430px] lg:max-w-max
+    }
+    &-gray {
+      img {
+        @apply w-[273px] h-[241px] md:w-[214px] md:h-[189px] right-[-136px] top-[92px] md:right-[-38px] md:top-[28px] lg:w-[333px] lg:h-[294px] absolute lg:right-[-67px] lg:top-[5px]
+      }
+      .post__article__title {
+        @apply max-w-[240px] md:max-w-[430px] lg:max-w-[630px] text-[21px] leading-[25px] md:text-xl lg:text-3xl font-medium
+      }
+      a {
+        @apply border-black
+      }
+      @apply bg-gray-200 rounded-[25px] lg:rounded-[30px] relative
+    }
+    &-colorful {
+      &:before {
+        @apply content-[''] absolute top-0 left-0 w-full h-full opacity-60 bg-black z-[11] rounded-[25px] lg:rounded-[30px]
+      }
+      img {
+        @apply absolute left-0 top-0 w-full h-full object-cover rounded-[25px] lg:rounded-[30px]
+      }
+      a {
+        @apply hover:bg-white hover:text-black hover:border-white
+      }
+      @apply mb-6 text-white relative
+    }
+    &__content {
+      @apply z-[12] relative flex flex-col justify-between h-full items-start rounded-[25px] lg:rounded-[30px]
+    }
+    @apply h-[360px] md:h-[234px] lg:h-[292px] relative px-[25px] pt-[29px] pb-6 md:pt-[26px] md:p-[30px] lg:p-[30px] overflow-hidden
+  }
+}

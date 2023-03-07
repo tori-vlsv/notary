@@ -1,0 +1,180 @@
+.header {
+  &__logo {
+    img {
+      @apply w-[253px] md:w-[212px] lg:w-auto
+    }
+    span {
+      @apply pl-[53px] md:pl-11 lg:pl-[62px] inline-block mt-2 lg:mt-3 text-[13px] md:text-[11px] lg:text-[15px] leading-[15px] text-white
+    }
+  }
+  &__burger {
+    @apply block lg:hidden absolute right-0 top-[3px] md:top-auto
+  }
+  &__wrapper {
+    @apply flex items-start lg:items-center justify-between flex-wrap relative
+  }
+  &__nav {
+    nav {
+      @apply hidden lg:flex items-center pt-1
+    }
+    @apply flex lg:pt-2 items-center lg:items-start
+  }
+  &__link {
+    &:first-child {
+      @apply ml-0
+    }
+    &.active {
+      @apply border-white
+    }
+    @apply text-white text-[17px] leading-6 font-medium ml-[45px] border-b border-transparent will-change-[border-color] duration-300 transition-colors hover:border-white
+  }
+  &__phone {
+    a {
+      &:nth-child(1) {
+        img {
+          @apply w-[13px] h-[13px] lg:w-[22px] lg:h-[22px] mr-[7px]
+        }
+        span {
+          @apply border-b border-transparent will-change-[border-color] duration-300 transition-colors
+        }
+        &:hover {
+          span {
+            @apply border-white
+          }
+        }
+        @apply mt-1 lg:mt-0 text-lg leading-5 lg:text-2xl lg:leading-8 font-semibold inline-flex items-center lg:mb-6 text-white
+      }
+      &:nth-child(2) {
+        img {
+          @apply mr-[5px] lg:mr-[9px]
+        }
+        @apply will-change-[color] hover:text-red-400 duration-300 transition-colors ml-[22px] lg:ml-0 flex items-center py-[6px] pl-2 pr-3 text-[13px] leading-[22px] font-semibold text-black bg-white rounded-[56px]
+      }
+    }
+    @apply md:pr-[50px] lg:pr-0 hidden md:flex lg:flex-col lg:ml-[45px] justify-end items-start lg:items-end
+  }
+  &__items {
+    @apply hidden md:flex items-start w-full justify-center lg:justify-end mt-9
+  }
+  &__item {
+    img {
+      @apply mr-3 mt-[2px] w-[13px] h-[13px] lg:w-auto lg:h-auto
+    }
+    p,
+    a {
+      @apply text-[11px] leading-4 lg:text-[15px] lg:leading-[22px] text-white
+    }
+    a {
+      &:hover {
+        @apply border-white
+      }
+      @apply border-b border-transparent duration-300 will-change-[border-color] transition-colors
+    }
+    &:first-child {
+      @apply ml-0
+    }
+    &:last-child {
+      img {
+        @apply mt-0
+      }
+    }
+    @apply ml-8 lg:ml-14 flex items-start
+  }
+  &.scrolled {
+    .header {
+      &__items {
+        @apply hidden lg:flex -mt-9 right-[220px] relative
+      }
+      &__item {
+        &:last-child {
+          @apply hidden
+        }
+      }
+    }
+    @apply shadow-md py-3 md:py-[22px] lg:pt-[30px] lg:pb-[37px]
+  }
+  &.active {
+    @apply py-[23px]
+  }
+  .menu {
+    &__inner {
+      @apply max-h-[calc(var(--vh,_1vh)_*_100-120px)] overflow-x-auto
+    }
+    &__header {
+      @apply max-w-[335px] md:max-w-full mx-auto md:mx-0 flex justify-between
+    }
+    &__logo {
+      img {
+        @apply w-[253px] md:w-[212px] lg:w-auto
+      }
+      span {
+        @apply pl-[53px] md:pl-11 lg:pl-[62px] inline-block mt-2 lg:mt-3 text-[13px] md:text-[11px] lg:text-[15px] leading-[15px] text-white
+      }
+      &-mobile {
+        @apply block md:hidden
+      }
+      @apply hidden md:block
+    }
+    &__footer {
+      @apply max-w-[335px] md:max-w-full mx-auto md:mx-10 md:pt-[72px] flex justify-between
+    }
+    &__items {
+      .header__item {
+        &:first-child {
+          @apply mt-0
+        }
+        &:last-child {
+          @apply flex items-center
+        }
+        img {
+          @apply w-5 h-5 mt-0
+        }
+        p,
+        a {
+          @apply text-[15px] leading-[22px]
+        }
+        @apply ml-0 mt-4
+      }
+      @apply md:w-1/2
+    }
+    &__contacts {
+      a {
+        &:nth-child(1) {
+          img {
+            @apply w-[22px] h-[22px] mr-2.5
+          }
+          span {
+            @apply border-b border-transparent will-change-[border-color] duration-300 transition-colors
+          }
+          &:hover {
+            span {
+              @apply border-white
+            }
+          }
+          @apply text-[25px] leading-8 font-medium inline-flex items-center text-white
+        }
+        &:nth-child(2) {
+          img {
+            @apply mr-[9px]
+          }
+          @apply will-change-[color] duration-300 hover:text-red-400 transition-colors mt-5 flex items-center py-[6px] pl-2 pr-3 text-[13px] leading-[22px] font-semibold text-black bg-white rounded-[56px]
+        }
+      }
+      @apply hidden md:flex flex-col items-start
+    }
+    nav {
+      a {
+        &.active {
+          @apply border-white
+        }
+        &:first-child {
+          @apply mt-0
+        }
+        @apply border-b border-transparent font-medium text-[21px] leading-7 md:text-[34px] md:leading-10 mt-7 md:mt-12
+      }
+      @apply max-w-[335px] md:max-w-full mx-auto flex flex-col items-start md:mx-10 pt-10 pb-11 md:py-16 md:border-b border-red-300 
+    }
+    @apply hidden text-white px-6 md:px-10 pt-[25px] md:pt-[22px] pb-12 fixed bg-red-400 left-0 top-0 w-full h-[calc(var(--vh,_1vh)_*_100)]
+  }
+  @apply transition-[padding] will-change-[padding-top,padding-bottom] duration-300 rounded-b-[40px] absolute top-0 left-0 w-full py-[25px] md:py-[22px] lg:pt-[30px] lg:pb-[37px] bg-red-400 z-50
+}

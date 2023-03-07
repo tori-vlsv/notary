@@ -1,0 +1,15 @@
+.advantages {
+  &__wrapper {
+    @apply grid gap-[30px] md:gap-0 lg:gap-5 grid-cols-1 md:grid-cols-5
+  }
+  &__item {
+    img {
+      @apply mr-[30px] md:mr-0 w-[75px] h-[75px] md:w-[72px] md:h-[63px] lg:w-[124px] lg:h-[104px] md:mb-4 lg:mb-7
+    }
+    p {
+      @apply w-[200px] md:w-auto max-w-[200px] md:max-w-full text-[17px] leading-[23px] md:text-[11px] md:leading-[15px] lg:text-base lg:leading-[22px] font-medium md:text-center
+    }
+    @apply flex md:flex-col items-center justify-center md:justify-start col-span-1
+  }
+  @apply pt-[61px] md:pt-[70px] lg:pt-[120px]
+}

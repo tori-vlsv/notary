@@ -1,0 +1,57 @@
+.contacts {
+  &__wrapper {
+    @apply flex flex-col items-start
+  }
+  &__title {
+    @apply text-[26px] leading-[31px] mb-7 lg:text-[38px] lg:leading-[52px] font-bold md:mb-9 lg:mb-[51px] uppercase
+  }
+  &__phone {
+    @apply text-3xl lg:text-[33px] leading-[38px] font-bold
+  }
+  &__whatsup {
+    img {
+      @apply mr-3 w-7 h-7
+    }
+    @apply will-change-[color] duration-300 transition-colors hover:text-red-400 mt-4 lg:mt-6 inline-flex items-center py-2 pl-3 pr-4 text-lg leading-[29px] font-semibold text-black bg-white rounded-[56px] mb-[37px] md:mb-12 lg:mb-[59px]
+  }
+  &__bg {
+    &.pc {
+      @apply hidden md:block
+    }
+    &.mob {
+      @apply block md:hidden
+    }
+    @apply mt-12 md:mt-0 relative -bottom-5 md:absolute md:-bottom-10 lg:-bottom-16 md:-right-[90px] lg:-right-12 max-w-[600px] lg:max-w-[708px] md:w-full w-[calc(100%+160px)] -mx-20 md:mx-0
+  }
+  &__items {
+    @apply grid max-w-[302px] lg:max-w-[680px] grid-cols-1 lg:grid-cols-2 lg:gap-x-5 gap-y-6 md:gap-y-10 lg:gap-y-[50px]
+  }
+  &__item {
+    img {
+      @apply mr-4 lg:mr-[22px] max-w-[24px] max-h-[24px] w-full h-full
+    }
+    &:first-child {
+      p {
+        br {
+          @apply hidden md:block
+        }
+      }
+      @apply flex-nowrap md:flex-wrap
+    }
+    &__inner {
+      &:first-child {
+        @apply mt-0
+      }
+      @apply flex items-center mt-2 md:mt-[18px]
+    }
+    p,
+    a {
+      @apply leading-[23px] md:text-sm md:leading-[21px] lg:text-lg lg:leading-6 font-medium md:font-semibold
+    }
+    a {
+      @apply border-b border-solid will-change-[border-color] duration-300 transition-colors border-transparent hover:border-black
+    }
+    @apply flex flex-wrap items-start
+  }
+  @apply pt-[60px] md:py-16 lg:pt-[120px] lg:pb-[137px] text-black relative overflow-hidden
+}

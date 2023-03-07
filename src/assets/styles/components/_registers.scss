@@ -1,0 +1,42 @@
+.registers {
+  &__wrapper {
+    @apply flex flex-col
+  }
+  &__header {
+    @apply mb-7 md:mb-[34px] lg:mb-[65px]
+  }
+  &__title {
+    @apply max-w-[140px] md:max-w-full text-[26px] leading-[31px] md:text-[26px] md:leading-[34px] lg:text-[35px] lg:leading-[52px] font-semibold uppercase
+  }
+  &__items {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-[60px] lg:gap-x-[84px]
+  }
+  &__item {
+    &:last-child {
+      img {
+        @apply mr-0 will-change-transform duration-300 transition-transform
+      }
+      &:hover {
+        img {
+          @apply translate-x-[5px]
+        }
+      }
+    }
+    &:hover {
+      .registers__text {
+        @apply text-red-400
+      }
+    }
+    img {
+      @apply mr-[30px] md:mr-5 lg:mr-[25px] max-w-[58px] md:max-w-[60px] lg:max-w-max object-contain
+    }
+    @apply flex items-center 
+  }
+  &__text {
+    @apply w-[200px] md:w-full text-base leading-[22px] lg:text-lg lg:leading-7 font-medium will-change-[color] duration-300 transition-colors
+  }
+  &__link {
+    @apply text-[17px] md:text-base lg:text-lg leading-6 text-red-400 font-semibold mr-4 md:mr-1.5 lg:mr-2.5
+  }
+  @apply bg-gray-800 pt-[50px] md:pt-[60px] lg:pt-[100px] text-black relative
+}

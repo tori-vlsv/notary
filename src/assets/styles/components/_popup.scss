@@ -1,0 +1,94 @@
+.popup {
+  &.active {
+    @apply opacity-100 visible
+  }
+  &__bg {
+    &.active {
+      @apply opacity-100 visible
+    }
+    @apply invisible opacity-0 duration-300 will-change-[opacity,visibility] transition-all bg-[rgba(0,0,0,.5)] fixed top-0 left-0 w-full h-full z-[60]
+  }
+  &__header {
+    @apply relative max-w-[335px] md:max-w-full mx-auto md:mx-0 flex flex-col md:flex-row md:items-end justify-between mb-4 md:mb-0 items-start
+  }
+  &__title {
+    @apply text-[32px] leading-9 lg:text-[40px] font-semibold lg:leading-[50px] max-w-[229px] lg:max-w-[422px]
+  }
+  &__desc {
+    @apply mt-[7px] md:mt-0 leading-[23px] md:text-sm md:leading-[21px] lg:text-xl lg:leading-[30px] max-w-[246px] lg:max-w-[330px]
+  }
+  &__close {
+    svg {
+      path {
+        @apply duration-300 will-change-[stroke] transition-colors
+      }
+      @apply w-full h-full
+    }
+    &:hover {
+      svg {
+        path {
+          @apply stroke-red-400
+        }
+      }
+    }
+    @apply absolute top-[10px] right-[6px] md:right-[-30px] md:top-0 lg:-right-[30px] cursor-pointer w-5 h-5 md:w-auto md:h-auto
+  }
+  form {
+    input {
+      &:nth-child(2),
+      &:nth-child(3) {
+        @apply md:w-[43%]
+      }
+      @apply rounded-none duration-300 will-change-[border-color] transition-colors hover:border-red-400 active:border-red-400 focus:border-red-400 w-full py-[18px] md:py-5 mt-1 text-black text-[17px] md:text-base lg:text-lg leading-5 md:leading-[25px] lg:leading-[22px] border-b border-black focus:outline-none active:outline-none
+    }
+    textarea {
+      @apply duration-300 will-change-[border-color] transition-colors hover:border-red-400 active:border-red-400 focus:border-red-400 resize-none w-full rounded-3xl md:rounded-[25px] bg-transparent px-4 py-[14px] md:py-[27px] md:px-6 lg:py-6 lg:px-6 text-black text-lg leading-[22px] mt-8 border border-black focus:outline-none active:outline-none
+    }
+    .g-recaptcha {
+      @apply mt-8
+    }
+    @apply max-w-[335px] md:max-w-full mx-auto md:mx-0 flex flex-wrap justify-between max-h-[calc(var(--vh,_1vh)_*_100-237px)] md:max-h-full overflow-y-auto overflow-x-hidden
+  }
+  &__dropdown {
+    &__header {
+      input {
+        @apply invisible absolute top-0 left-0
+      }
+      img {
+        @apply duration-300 will-change-transform transition-transform
+      }
+      span {
+        @apply text-gray-400 text-[17px] md:text-base lg:text-lg leading-5 md:leading-[25px] lg:leading-[22px]
+      }
+      &.active {
+        img {
+          @apply rotate-180
+        }
+      }
+      @apply relative flex items-center justify-between cursor-pointer py-5 mt-1
+    }
+    &__body {
+      p {
+        &:first-child {
+          @apply mt-0
+        }
+        @apply mt-5 cursor-pointer duration-300 will-change-[color] transition-colors hover:text-red-400
+      }
+      @apply bg-white z-10 absolute top-[64px] md:top-[69px] lg:top-[66px] w-full border border-black py-4 px-2 rounded-b-xl hidden flex-col items-start
+    }
+    @apply relative border-b border-black text-lg leading-[22px] w-full duration-300 will-change-[border-color] transition-colors hover:border-red-400
+  }
+  &__footer {
+    p {
+      a {
+        @apply border-b border-black duration-300 will-change-[color,border-color] transition-colors hover:text-red-400 hover:border-red-400
+      }
+      @apply order-2 md:order-1 mt-[18px] md:mt-0 font-medium text-black max-w-[336px] lg:max-w-[400px] text-[15px] leading-[22px] md:text-sm md:leading-[21px] lg:text-lg lg:leading-7
+    }
+    button {
+      @apply order-1 md:order-2 bg-red-400 rounded-[25px] text-white text-[19px] md:text-lg leading-7 lg:text-2xl lg:leading-[33px] font-medium py-[19px] px-7 md:py-[14px] lg:py-[17px] md:px-[23px] lg:px-[33px] duration-300 will-change-[background-color] transition-colors hover:bg-red-500
+    }
+    @apply flex items-start md:items-center flex-col md:flex-row justify-between mt-[10px] w-full
+  }
+  @apply invisible opacity-0 duration-300 will-change-[opacity,visibility] transition-all bg-white fixed top-0 left-0 w-full md:left-10 md:right-10 lg:right-auto md:top-1/2 lg:left-1/2 md:-translate-y-1/2 lg:-translate-x-1/2 md:w-[calc(100%-80px)] lg:w-[1032px] z-[70] pt-8 px-6 pb-[57px] h-[calc(var(--vh,_1vh)_*_100)] md:h-auto md:pt-8 md:pb-10 md:px-16 md:rounded-[25px] lg:rounded-[40px]
+}

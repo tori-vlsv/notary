@@ -1,0 +1,24 @@
+extends ../layouts/master.pug
+
+block title
+  title Нотариальная контора | Договор купли продажи квартиры (отчуждение доли)
+
+block basicSeo
+  meta(name='description' content='Index page')
+  meta(name='keywords', content='index, page')
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/css-element-queries/1.2.3/ResizeSensor.js"></script>
+block content
+
+  +header('home')
+
+  main
+    include ../components/post/postHero.pug
+    include ../components/post/postContent.pug
+    include ../components/reviews.pug
+    include ../components/licenses.pug
+    include ../components/contacts.pug
+    include ../components/popup.pug

@@ -1,0 +1,20 @@
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+  @apply text-[17px] md:text-base lg:text-lg leading-5 md:leading-[25px] lg:leading-[22px]
+}
+
+textarea::-moz-placeholder,
+input::-moz-placeholder {
+  @apply text-[17px] md:text-base lg:text-lg leading-5 md:leading-[25px] lg:leading-[22px]
+}
+
+textarea:-moz-placeholder,
+input:-moz-placeholder {
+  @apply text-[17px] md:text-base lg:text-lg leading-5 md:leading-[25px] lg:leading-[22px]
+}
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder {
+  @apply text-[17px] md:text-base lg:text-lg leading-5 md:leading-[25px] lg:leading-[22px]
+}

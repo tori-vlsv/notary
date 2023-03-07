@@ -1,0 +1,10 @@
+mixin questions-item(title, text, link_title, link_href)
+  .swiper-slide 
+    article.questions__item 
+      .questions__item__icon
+        img(src="/assets/images/icons/question-red.svg", alt="question-red")
+      .questions__item__title= title
+      .questions__item__text= text
+      a(href=""+link_href).questions__item__link
+        span= link_title 
+        img(src="/assets/images/icons/arrow-right-red.svg", alt="arrow-right-red")

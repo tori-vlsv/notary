@@ -1,0 +1,24 @@
+.reviews {
+  &__wrapper {
+    @apply flex flex-col items-start md:items-center
+  }
+  &__header {
+    @apply w-full flex justify-between items-end md:items-center mb-[26px] md:mb-8 lg:mb-[45px]
+  }
+  &__title {
+    @apply max-w-[140px] md:max-w-full text-[26px] leading-[31px] md:text-[26px] md:leading-[34px] lg:text-[35px] lg:leading-[52px] font-semibold uppercase
+  }
+  &__link {
+    @apply border-transparent will-change-[border-color] duration-300 transition-colors hover:border-black border-b text-base leading-[22px] md:text-[15px] lg:text-[15px] mb-1 md:mb-0 whitespace-nowrap
+  }
+  &__items{
+    @apply grid md:grid-cols-3 gap-y-4 md:gap-y-0 md:gap-x-6 items-start mb-10 md:mb-[50px]
+  }
+  &__button {
+    button {
+      @apply text-[19px] md:text-lg leading-7 lg:text-2xl lg:leading-[33px] font-medium
+    }
+    @apply md:mx-auto will-change-[background-color] hover:bg-red-500 duration-300 transition-colors bg-red-400 rounded-[22px] lg:rounded-[25px] py-[19px] md:py-[14px] inline-block px-7 md:px-[23px] lg:py-[17px] lg:px-[33px] text-white
+  }
+  @apply bg-gray-800 pt-[50px] md:pt-[60px] lg:pt-[100px] text-black relative pb-[50px] md:pb-[60px] lg:pb-[100px]
+}

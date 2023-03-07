@@ -1,0 +1,24 @@
+.questions {
+  &__wrapper {
+    .swiper {
+      @apply overflow-visible md:overflow-hidden
+    }
+    @apply lg:bg-white lg:rounded-[30px] md:pt-[62px] lg:pt-[68px] md:pb-[72px] lg:pb-20 px-0 lg:px-[34px] md:flex md:flex-col
+  }
+  &__header {
+    @apply flex justify-between items-end md:items-center mb-[34px] md:mb-[38px] lg:mb-[45px]
+  }
+  &__title {
+    @apply text-[26px] leading-[31px] md:text-[26px] md:leading-[34px] lg:text-[35px] lg:leading-[52px] font-semibold uppercase
+  }
+  &__link {
+    @apply border-transparent will-change-[border-color] duration-300 transition-colors hover:border-black border-b text-base leading-[22px] md:text-[15px] lg:text-[15px] whitespace-nowrap mb-1 md:mb-0
+  }
+  &__button {
+    button {
+      @apply text-[19px] md:text-lg leading-7 lg:text-2xl lg:leading-[33px] font-medium
+    }
+    @apply will-change-[background-color] hover:bg-red-500 duration-300 transition-colors bg-red-400 rounded-[22px] lg:rounded-[25px] py-[19px] md:py-[14px] inline-block px-7 md:px-[23px] lg:py-[17px] lg:px-[33px] text-white mt-[46px] lg:mt-[50px] md:mx-auto
+  }
+  @apply mt-[65px] lg:pt-[114px] overflow-hidden md:bg-white lg:bg-transparent
+}

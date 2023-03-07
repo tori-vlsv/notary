@@ -1,0 +1,13 @@
+mixin actions-item(link_title, link_href, icon, alt, data)
+  .actions__item.hiddenOnMobile
+    .actions__item__header
+      a(href=""+link_href).actions__item__inner
+        .actions__item__title= link_title
+        .actions__item__icon
+          img(src=""+icon, alt=""+alt)
+      button(type="button").actions__item__toggle 
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    .actions__item__body 
+      ul 
+        for item in data
+          li= item

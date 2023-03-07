@@ -1,0 +1,11 @@
+.hero__item {
+  &__subtitle {
+    @apply uppercase tracking-[0.05em] text-[13px] md:text-sm leading-[15px] md:leading-[17px] lg:leading-[22px] font-bold mb-[18px] lg:mb-[22px]
+  }
+  &__title {
+    @apply text-[26px] md:text-[28px] leading-8 md:leading-[33px] lg:text-[46px] lg:leading-[54px] mb-3.5 md:mb-[17px] lg:mb-5 max-w-[393px] lg:max-w-[639px]
+  }
+  &__text {
+    @apply text-[15px] md:text-sm leading-[22px] md:leading-[21px] lg:text-lg lg:leading-7 max-w-[268px] lg:max-w-[416px]
+  }
+}

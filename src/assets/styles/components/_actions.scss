@@ -1,0 +1,9 @@
+.actions {
+  &__title {
+    @apply text-[26px] leading-[31px] mb-[35px] md:text-[38px] md:leading-[52px] font-bold md:mb-[31px] lg:mb-[53px] uppercase
+  }
+  &__items {
+    @apply grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-y-[30px]
+  }
+  @apply pt-[168px] md:pt-[122px] lg:pt-[172px]
+}

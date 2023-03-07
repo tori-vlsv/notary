@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Main parameters styles
+*/
+@import "./base/fonts";
+@import "./base/typography";
+
+/*
+  Base styles
+*/
+@import "./base/global";
+
+/*
+  Mixins styles
+*/
+@import "./mixins/header";
+@import "./mixins/actions-item";
+@import "./mixins/news-item";
+@import "./mixins/hero-item";
+@import "./mixins/reviews-item";
+@import "./mixins/questions-item";
+
+/*
+  Components styles
+*/
+@import "./components/breadcrumbs";
+@import "./components/hero";
+@import "./components/actions";
+@import "./components/location";
+@import "./components/advantages";
+@import "./components/questions";
+@import "./components/registers";
+@import "./components/reviews";
+@import "./components/information";
+@import "./components/news";
+@import "./components/licenses";
+@import "./components/help";
+@import "./components/rates";
+@import "./components/contacts";
+@import "./components/footer";
+@import "./components/error";
+@import "./components/popup";
+
+@import "./components/post/postHero";
+@import "./components/post/postSidebar";
+@import "./components/post/postContent";
+@import "./components/post/postTable";
+@import "./components/post/postForm";
+@import "./components/post/postArticles";

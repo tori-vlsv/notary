@@ -1,0 +1,12 @@
+.breadcrumbs {
+  a {
+    @apply will-change-[color] duration-300 transition-colors hover:text-red-400
+  }
+  span {
+    &:last-child {
+      @apply mx-0 text-black
+    }
+    @apply inline-block mx-1 text-red-400
+  }
+  @apply text-base md:text-sm lg:leading-[22px] lg:text-[15px] text-black mb-[35px] md:mb-[60px] lg:mb-10
+}

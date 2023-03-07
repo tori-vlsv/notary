@@ -1,0 +1,124 @@
+.post {
+  &__sidebar {
+    &__header {
+      @apply font-semibold bg-red-400 rounded-t-[30px] text-white text-xl leading-[22px] px-4 py-[26px] uppercase text-center
+    }
+    &__body {
+      @apply bg-white pt-[30px] pl-[33px] pr-[27px] pb-[35px] rounded-b-[30px]
+    }
+    &__toggle {
+      &.opened {
+        img {
+          @apply scale-75 rotate-180
+        }
+      }
+      &:first-child {
+        @apply mt-0
+      }
+      img {
+        @apply scale-75 transition-transform will-change-transform duration-300
+      }
+      @apply text-lg flex items-center justify-between font-semibold mt-5 cursor-pointer will-change-[color] duration-300 transition-colors hover:text-red-400
+    }
+    &__info {
+      a {
+        @apply text-base mt-4 will-change-[color] duration-300 transition-colors hover:text-red-400
+      }
+      @apply border-b border-opacity-[.15] flex flex-col items-start pb-5
+    }
+    &__item {
+      &:first-child {
+        @apply pt-0
+      }
+      &:last-child {
+        @apply pb-0 border-0
+      }
+      p {
+        @apply transition-colors duration-300 will-change-[color]
+      }
+      &:hover {
+        p {
+          @apply text-red-400
+        }
+      }
+      @apply flex items-center border-b border-opacity-[.15] py-4
+    }
+    &__link {
+      &:first-child {
+        @apply mt-5 
+      }
+      &:last-child {
+        @apply mb-0
+      }
+      @apply mb-5
+    }
+    &__online {
+      img {
+        @apply w-7 h-[29px] mr-[15px]
+      }
+      p {
+        @apply text-[21px] leading-[45px] font-semibold text-white
+      }
+      @apply mt-[57px] flex items-center rounded-[30px] bg-red-400 py-4 px-[27px] will-change-[color] duration-300 transition-colors hover:bg-red-500 w-full
+    }
+    &__whatsup {
+      p {
+        @apply text-[21px] leading-[26px] font-semibold text-black
+      }
+      img {
+        @apply w-[35px] h-[35px] mr-3
+      }
+      &:hover {
+        p {
+          @apply text-red-400
+        }
+      }
+      @apply mt-5 bg-white rounded-[30px] flex items-center py-[21px] px-[23px] will-change-[color] duration-300 transition-colors
+    }
+    &__helpful {
+      p {
+        @apply mt-0 text-[15px] leading-[22px] font-medium
+      }
+      img {
+        @apply max-w-[44px] object-contain mr-3
+      }
+      @apply mt-[57px]
+    }
+    &__text {
+      @apply mt-[10px] pl-[57px] mb-[22px] text-sm
+    }
+    &__contacts {
+      .post__sidebar__whatsup {
+        p {
+          @apply text-[17px] leading-[25px] will-change-[color] duration-300 transition-colors
+        }
+        &:hover {
+          span {
+            @apply text-red-400
+          }
+        }
+        @apply mt-[58px] rounded-[20px] px-[18px] py-5
+      }
+      @apply mt-[57px] rounded-[30px] px-7 pt-[42px] pb-[30px] bg-sidebar bg-no-repeat bg-cover bg-[0%_50%]
+    }
+    &__number {
+      @apply text-[26px] leading-[24px] font-semibold mb-[6px] will-change-[color] duration-300 transition-colors hover:text-red-400
+    }
+    &__schedule {
+      p {
+        @apply text-base leading-[22px]
+      }
+      @apply mb-5
+    }
+    &__location {
+      img {
+        @apply max-h-[16px] mr-[13px] mt-1
+      }
+      p {
+        @apply text-sm leading-5
+      }
+      @apply mb-[10px] flex items-start
+    }
+    @apply w-[322px] hidden lg:block
+  }
+}

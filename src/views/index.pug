@@ -1,0 +1,32 @@
+extends ./layouts/master.pug
+
+block title
+  title Нотариальная контора | Главная
+
+block basicSeo
+  meta(name='description' content='Index page')
+  meta(name='keywords', content='index, page')
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+  +header('home')
+
+  main
+    include ./components/hero.pug
+    include ./components/actions.pug
+    include ./components/location.pug
+    include ./components/advantages.pug
+    include ./components/questions.pug
+    include ./components/registers.pug
+    include ./components/reviews.pug 
+    include ./components/information.pug
+    include ./components/news.pug
+    include ./components/licenses.pug
+    include ./components/help.pug
+    include ./components/rates.pug
+    include ./components/contacts.pug
+    include ./components/popup.pug
